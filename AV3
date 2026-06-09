@@ -1,0 +1,124 @@
+programa {
+  funcao inicio() {
+
+    inteiro opcao
+    inteiro pontuacao = 0
+
+    escreva("==== QUIZ DE BASQUETE ====\n")
+    escreva("1 - Comecar quiz\n")
+    escreva("2 - Regras\n")
+    escreva("3 - Sair\n")
+
+    leia(opcao)
+
+    escolha(opcao) {
+      caso 1:
+        caracter resposta
+
+        para(inteiro i = 1; i <= 5; i++) {
+
+          se(i == 1) {
+            escreva("Qual o jogador tem mais titulos na NBA?\n")
+            escreva("A) Bill Russell\n")
+            escreva("B) Lebron James\n")
+            escreva("C) Lamelo Ball\n")
+            escreva("D) Michael Jordan\n")
+            leia(resposta)
+            se(resposta == "a" ou "A")  {
+              escreva("Resposta correta!\n")
+              pontuacao++
+            }
+            senao
+              escreva("Resposta errada!\n")
+          }
+
+          se(i == 2) {
+            escreva("Qual time possui mais titulos na NBA?\n")
+            escreva("A) Miami Heat\n")
+            escreva("B) Chicago Bulls\n")
+            escreva("C) Boston Celtics\n")
+            escreva("D) Los Angeles Lakers\n")
+            leia(resposta)
+            se(resposta == "c" ou "C") {
+              escreva("Resposta correta!\n")
+              pontuacao++
+            }
+            senao
+              escreva("Resposta errada!\n")
+          }
+
+          se(i == 3) {
+            escreva("Qual Liga e considerada a maior liga de basquete do Mundo?\n")
+            escreva("A) NBA\n")
+            escreva("B) NBB\n")
+            escreva("C) NCAA\n")
+            escreva("D) Flamengo\n")
+            leia(resposta)
+            se(resposta == "a" ou "A") {
+              escreva("Resposta correta!\n")
+              pontuacao++
+            }
+            senao
+              escreva("Resposta errada!\n")
+          }
+
+          se(i == 4) {
+            escreva("Quantos periodos tem uma partida da NBA?\n")
+            escreva("A) 2\n")
+            escreva("B) 5\n")
+            escreva("C) 3\n")
+            escreva("D) 4\n")
+            leia(resposta)
+            se(resposta == "d" ou "D") {
+              escreva("Resposta correta!\n")
+              pontuacao++
+            }
+            senao
+              escreva("Resposta errada!\n")
+          }
+
+          se(i == 5) {
+            escreva("Quantos pontos vale um arremesso atras da linha de tres pontos?\n")
+            escreva("A) 2\n")
+            escreva("B) 5\n")
+            escreva("C) 3\n")
+            escreva("D) 1\n")
+            leia(resposta)
+            se(resposta == "c") {
+              escreva("Resposta correta!\n")
+              pontuacao++
+            }
+            senao
+              escreva("Resposta errada!\n")
+          }
+
+        }
+
+        escreva("\nA sua pontuacao foi de ", pontuacao, " de 5 pontos\n")
+
+        se(pontuacao == 5) {
+          escreva("\n=============================\n")
+          escreva("  PARABENS! VOCE E UM CAMPEAO!\n")
+          escreva("=============================\n")
+          escreva("Voce acertou TODAS as questoes!\n")
+          escreva("Conhecimento digno de um MVP da NBA!\n")
+          escreva("PONTUACAO PERFEITA: 5/5\n")
+        }
+
+        pare
+
+      caso 2:
+        escreva("1 - O quiz possui 5 perguntas\n")
+        escreva("2 - Cada resposta correta voce ganhara 1 ponto\n")
+        escreva("3 - Leia atentamente as perguntas\n")
+        escreva("4 - Boa sorte\n\n")
+        escreva("1 - Voltar ao menu\n")
+        pare
+
+      caso 3:
+        escreva("Encerrando o sistema....\n")
+        pare
+    }
+
+  }
+}
